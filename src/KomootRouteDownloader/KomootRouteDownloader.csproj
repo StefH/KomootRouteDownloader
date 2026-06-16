@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>0.0.1-preview-01</Version>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <LangVersion>13</LangVersion>
+    <Authors>Stef Heyenrath</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/StefH/KomootRouteDownloader</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/StefH/KomootRouteDownloader</RepositoryUrl>
+    <PackageReadmeFile>PackageReadme.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ProjectGuid>{38C2BB6E-EE23-1234-B8D5-A2AD592DE5E3}</ProjectGuid>
+    <Description>This project uses PuppeteerSharp to download routes from Komoot.</Description>
+    <PackageTags>Komoot;Route;Downloader;Puppeteer</PackageTags>
+    <!-- <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../../PackageReleaseNotes.txt"))</PackageReleaseNotes> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../resources/icon.png" Pack="true" PackagePath="" />
+    <None Include="PackageReadme.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PuppeteerSharp" Version="25.1.1" />
+
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.300">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
