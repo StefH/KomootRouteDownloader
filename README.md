@@ -1,6 +1,9 @@
 ## Info
 This project uses PuppeteerSharp to download routes from Komoot.
 
+### NuGet
+[![NuGet](https://img.shields.io/nuget/v/KomootRouteDownloadService.svg?style=flat-square)](https://www.nuget.org/packages/KomootRouteDownloadService)
+
 ### Usage
 
 ``` c#
